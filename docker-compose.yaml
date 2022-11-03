@@ -2,6 +2,7 @@ version: "3.3"
 services:
   caddy:
     build: ./xcaddy
+#    image: mting/xcaddy:0.1
     container_name: xcaddy
     ports:
       - "443:443"
