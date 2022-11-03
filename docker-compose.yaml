@@ -1,0 +1,9 @@
+version: "3.3"
+services:
+  caddy:
+    build: ./xcaddy
+    container_name: xcaddy
+    ports:
+      - "443:443"
+    volumes:
+      - ./config/Caddyfile:/etc/caddy/Caddyfile

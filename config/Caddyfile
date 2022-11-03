@@ -1,0 +1,13 @@
+:443, example.com
+tls youremail@example.com
+route {
+  forward_proxy {
+    basic_auth test 888
+    hide_ip
+    hide_via
+    probe_resistance
+  }
+   reverse_proxy https://www.google.com {
+    header_up Host {upstream_hostport}
+  }
+}
